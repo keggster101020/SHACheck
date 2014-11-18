@@ -11,3 +11,7 @@ C:\Users\Keegan\Documents\Visual Studio 2012\Projects\SHACheck\SHACheck\obj\Debu
 C:\Users\Keegan\Documents\Visual Studio 2012\Projects\SHACheck\SHACheck\bin\Debug\MetroFramework.Design.dll
 C:\Users\Keegan\Documents\Visual Studio 2012\Projects\SHACheck\SHACheck\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\Keegan\Documents\Visual Studio 2012\Projects\SHACheck\SHACheck\obj\Debug\SHACheck.CheckSHA.resources
+C:\Users\Keegan\Documents\Visual Studio 2012\Projects\SHACheck\SHACheck\bin\Debug\SHACheck.exe.manifest
+C:\Users\Keegan\Documents\Visual Studio 2012\Projects\SHACheck\SHACheck\bin\Debug\SHACheck.application
+C:\Users\Keegan\Documents\Visual Studio 2012\Projects\SHACheck\SHACheck\obj\Debug\SHACheck.exe.manifest
+C:\Users\Keegan\Documents\Visual Studio 2012\Projects\SHACheck\SHACheck\obj\Debug\SHACheck.application

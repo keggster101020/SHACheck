@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="SHACheck.exe" version="1.0.0.0" publicKeyToken="14048456a3891894" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="SHACheck" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="SHACheck.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MetroFramework.dll" size="357888">
+      <assemblyIdentity name="MetroFramework" version="1.3.0.0" publicKeyToken="5F91A84759BF584A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>McCG203friKsCNp5FXoZRrGAeWJJ/jXd0+oszSTSYAc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MetroFramework.Design.dll" size="17408">
+      <assemblyIdentity name="MetroFramework.Design" version="1.3.0.0" publicKeyToken="5F91A84759BF584A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>HoQfkC/1E6vVkdhaA/aHTb0BhkfSdK3Og4R9C3olufI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MetroFramework.Fonts.dll" size="672256">
+      <assemblyIdentity name="MetroFramework.Fonts" version="1.3.0.0" publicKeyToken="5F91A84759BF584A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>w49EAixdg1DLQCoXbQ/rh0J1rc+ppRDF1ByDh32eYAM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SHACheck.exe" size="12288">
+      <assemblyIdentity name="SHACheck" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>vMWgufY/v83azxcyJlsqv6L62jA62mNlDSVegqZADeI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="MetroFramework.txt" size="1266">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>+yV6adEVlpUIOiH/IdsfqaixKo0MB7DiB/hBOyI4wKw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SHACheck.exe.config" size="539">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>+qQs5LxpZQADHL843yIcHfgm27/SDmHmB08T6pS5hDc=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=KEEGAN\Keegan" issuerKeyHash="57255e3000651005349f3ea76eefd89b9cbb4f54" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>CWdcb5Vmn2+bcWXdEotB51X0mwz6DMjRx+jfOKIsTH0=</DigestValue></Reference></SignedInfo><SignatureValue>e8R6GUdNMEy1yarf1vLW/31w0UcPE9zcqqyXOx50F0EJZUfZKxYXOoIxD+OusZoxMU+gDQffNlStuJe2t+WwTeiUT4JPu6hpfIoJDzGvVGE9l/C2+e1LkQUuu0VqRAXYnHKB29uhfl/J2vZvpqT6MVCJSOk9lNKxkanUiCno9hw=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>tbY5PM90zaS5BKXunpF6pb0Q9NxTjCr2Kfk4zlchT8moRGp1y0ojiZGCY7FMO63+FVMCispu17ZNSPMvnQrX6+HYH5pNFi2pRJyqMH6m6mC8+CJ7SwEnvwCV9ZIQr6ukNxSrggLPrAgQ5O6TvZlwcDPOAfmBgIi9Fmx89/WxaWc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="7d4c2ca238dfe8c7d1c80cfa0c9bf455e7418b12dd65719b6f9f66956f5c6709" Description="" Url=""><as:assemblyIdentity name="SHACheck.exe" version="1.0.0.0" publicKeyToken="14048456a3891894" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=KEEGAN\Keegan</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>IHLvhw1fXcfC8gmST1Vz7TqacDcq9YpwoCRY+kza1oM=</DigestValue></Reference></SignedInfo><SignatureValue>Q2zm3VgEKnzmPdJN6YeZApN3qLJbjZBmnfV8GuiqH/F3jmO+mLU5ZYdJvYDqApPJKK5TJvZ/ATOEhCSxXzhIbv0jb0tPK7FFNovlbYap2cKZLKX9lx2k1/VZ9oZxjZWKcV8tGHvOfahCBFfDNoWTVGxOVG5bbg1AAvq/rMfQZ4o=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>tbY5PM90zaS5BKXunpF6pb0Q9NxTjCr2Kfk4zlchT8moRGp1y0ojiZGCY7FMO63+FVMCispu17ZNSPMvnQrX6+HYH5pNFi2pRJyqMH6m6mC8+CJ7SwEnvwCV9ZIQr6ukNxSrggLPrAgQ5O6TvZlwcDPOAfmBgIi9Fmx89/WxaWc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBzTCCATagAwIBAgIQeQqx3tLS3pxHuF/obCjGVTANBgkqhkiG9w0BAQsFADAlMSMwIQYDVQQDHhoASwBFAEUARwBBAE4AXABLAGUAZQBnAGEAbjAeFw0xNDExMTgwMzE3MjlaFw0xNTExMTgwOTE3MjlaMCUxIzAhBgNVBAMeGgBLAEUARQBHAEEATgBcAEsAZQBlAGcAYQBuMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC1tjk8z3TNpLkEpe6ekXqlvRD03FOMKvYp+TjOVyFPyahEanXLSiOJkYJjsUw7rf4VUwKKym7Xtk1I8y+dCtfr4dgfmk0WLalEnKowfqbqYLz4IntLASe/AJX1khCvq6Q3FKuCAs+sCBDk7pO9mXBwM84B+YGAiL0WbHz39bFpZwIDAQABMA0GCSqGSIb3DQEBCwUAA4GBABHSiZQvw45RlZ1fvl8fM6huTDJtfitzyyDGvHQDLr7e3Y6r2nSnlqsD0Bc4C3w8Ns0Fpr+k/4v1yHCBO/SOvcejr18D/z8OnrXDbo6tYSqtpmBS3MGyRq0jWx0YvOp21GNLh5d0eoYDgaVS2y61ztFavzf52d19uawso9CZdPME</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
