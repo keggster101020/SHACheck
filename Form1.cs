@@ -43,11 +43,17 @@ namespace SHACheck
                 FileStream stream = File.OpenRead(file);
                 String SHA = computeSHA(stream);
                 stream.Close();
+
+                FileStream streamMD5 = File.OpenRead(file); //file for MD5 check
+                String MD5 = computeMD5(streamMD5);
+                streamMD5.Close();
                 
                 SHA1.Text = SHA;
                 sha256.Text = SHA256;
+                md5.Text = MD5;
                 SHA1.Visible = true;
                 sha256.Visible = true;
+                md5.Visible = true;
             }
 
         }
@@ -55,24 +61,27 @@ namespace SHACheck
         private void check_Click(object sender, EventArgs e)
         {
             //making sure the check box has some validation
-            if (SHAtoCheck.Text == "" || SHAtoCheck.Text == null || SHAtoCheck.Text == "Input SHA value"
-                || SHA1.Text == "" || sha256.Text == "" || SHA1.Text == "PLACE HOLDER" || sha256.Text == "PLACE HOLDER")
+            if (SHAtoCheck.Text == "" || SHAtoCheck.Text == null || SHAtoCheck.Text == "Input SHA/MD5 value"
+                || SHA1.Text == "" || sha256.Text == "" || SHA1.Text == "PLACE HOLDER" || sha256.Text == "PLACE HOLDER"
+                || md5.Text =="" || md5.Text == "PLACEHOLDER")
             {
-                MetroMessageBox.Show(this, "Enter a SHA to check against", "Check is Empty of invalid", MessageBoxButtons.OK, MessageBoxIcon.None);
+                MetroMessageBox.Show(this, "Enter a SHA/MD5 to check against", "Check is Empty or invalid", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
             else
             {
                 String computedSHA = SHA1.Text;
                 String computedSHA256 = sha256.Text;
+                String computedMD5 = md5.Text;
                 String checkSHA = SHAtoCheck.Text;
                 //does an equalsIgnoreCase
-                if (computedSHA.Equals(checkSHA, StringComparison.InvariantCultureIgnoreCase) || computedSHA256.Equals(checkSHA,StringComparison.InvariantCultureIgnoreCase))
+                if (computedSHA.Equals(checkSHA, StringComparison.InvariantCultureIgnoreCase) || computedSHA256.Equals(checkSHA,StringComparison.InvariantCultureIgnoreCase)
+                    || computedMD5.Equals(checkSHA,StringComparison.InvariantCultureIgnoreCase))
                 {
-                    MetroMessageBox.Show(this, "The SHA's match", "Match", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                    MetroMessageBox.Show(this, "The SHA's/MD5's match", "Match", MessageBoxButtons.OK, MessageBoxIcon.Question);
                 }
                 else
                 {
-                    MetroMessageBox.Show(this, "The SHA's don't match", "ALERT", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MetroMessageBox.Show(this, "The SHA's/MD5's don't match", "ALERT", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -95,6 +104,20 @@ namespace SHACheck
             String holder = BitConverter.ToString(hash).Replace("-", String.Empty);
             sha256.Clear();
             return holder;
+        }
+
+        private String computeMD5(FileStream stream){
+            /*var md5 = MD5.Create();
+            var streamF = File.OpenRead(stream);
+            return (BitConverter.ToString(md5.ComputeHash(streamF)).Replace("-", String.Empty));*/
+
+            MD5 md5 = MD5.Create();
+            BufferedStream bs = new BufferedStream(stream);
+            byte[] hash = md5.ComputeHash(bs);
+            String holder = BitConverter.ToString(hash).Replace("-", String.Empty);
+            md5.Clear();
+            return holder;
+
         }
     }
 }

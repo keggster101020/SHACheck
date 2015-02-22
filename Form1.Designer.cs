@@ -39,6 +39,8 @@
             this.check = new MetroFramework.Controls.MetroButton();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.sha256 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.md5 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // labelSHA
@@ -102,7 +104,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(107, 271);
+            this.metroLabel1.Location = new System.Drawing.Point(107, 300);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(96, 19);
             this.metroLabel1.TabIndex = 5;
@@ -111,8 +113,8 @@
             // SHAtoCheck
             // 
             this.SHAtoCheck.Lines = new string[] {
-        "Input SHA value"};
-            this.SHAtoCheck.Location = new System.Drawing.Point(208, 267);
+        "Input SHA/MD5 value"};
+            this.SHAtoCheck.Location = new System.Drawing.Point(208, 296);
             this.SHAtoCheck.MaxLength = 32767;
             this.SHAtoCheck.Name = "SHAtoCheck";
             this.SHAtoCheck.PasswordChar = '\0';
@@ -120,12 +122,12 @@
             this.SHAtoCheck.SelectedText = "";
             this.SHAtoCheck.Size = new System.Drawing.Size(291, 23);
             this.SHAtoCheck.TabIndex = 6;
-            this.SHAtoCheck.Text = "Input SHA value";
+            this.SHAtoCheck.Text = "Input SHA/MD5 value";
             this.SHAtoCheck.UseSelectable = true;
             // 
             // check
             // 
-            this.check.Location = new System.Drawing.Point(505, 267);
+            this.check.Location = new System.Drawing.Point(505, 296);
             this.check.Name = "check";
             this.check.Size = new System.Drawing.Size(75, 23);
             this.check.TabIndex = 7;
@@ -153,6 +155,26 @@
             this.sha256.Text = "PLACE HOLDER";
             this.sha256.Visible = false;
             // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(107, 256);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(40, 19);
+            this.metroLabel3.TabIndex = 0;
+            this.metroLabel3.Text = "MD5:";
+            // 
+            // md5
+            // 
+            this.md5.AutoSize = true;
+            this.md5.LabelMode = MetroFramework.Controls.MetroLabelMode.Selectable;
+            this.md5.Location = new System.Drawing.Point(208, 256);
+            this.md5.Name = "md5";
+            this.md5.Size = new System.Drawing.Size(103, 19);
+            this.md5.TabIndex = 4;
+            this.md5.Text = "PLACE HOLDER";
+            this.md5.Visible = false;
+            // 
             // CheckSHA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,10 +183,12 @@
             this.Controls.Add(this.check);
             this.Controls.Add(this.SHAtoCheck);
             this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.md5);
             this.Controls.Add(this.sha256);
             this.Controls.Add(this.SHA1);
             this.Controls.Add(this.browseButton);
             this.Controls.Add(this.metroTextBox1);
+            this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.browseLabel);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.labelSHA);
@@ -189,6 +213,8 @@
         private MetroFramework.Controls.MetroButton check;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel sha256;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel md5;
 
 
     }
