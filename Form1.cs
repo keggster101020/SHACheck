@@ -29,7 +29,8 @@ namespace SHACheck
         {
             SHA1.Text = "";
             sha256.Text = "";
-            SHAtoCheck.Text = "Input SHA value";
+            md5.Text = "";
+            SHAtoCheck.Text = "Input SHA/MD5 value";
             DialogResult dr = openFileDialog1.ShowDialog();
 
             if (dr == DialogResult.OK)
@@ -92,7 +93,6 @@ namespace SHACheck
             BufferedStream bs = new BufferedStream(stream);
             byte[] hash = sha1.ComputeHash(bs);
             String hold = BitConverter.ToString(hash).Replace("-", String.Empty);
-            sha1.Clear();
             return hold;
         }
 
@@ -102,21 +102,20 @@ namespace SHACheck
             BufferedStream bs = new BufferedStream(stream);
             byte[] hash = sha256.ComputeHash(bs);
             String holder = BitConverter.ToString(hash).Replace("-", String.Empty);
-            sha256.Clear();
             return holder;
         }
 
         private String computeMD5(FileStream stream){
-            /*var md5 = MD5.Create();
-            var streamF = File.OpenRead(stream);
-            return (BitConverter.ToString(md5.ComputeHash(streamF)).Replace("-", String.Empty));*/
-
+            var md5 = MD5.Create();
+            var streamF = File.OpenRead(metroTextBox1.Text);
+            return (BitConverter.ToString(md5.ComputeHash(streamF)).Replace("-", String.Empty));
+            /*
             MD5 md5 = MD5.Create();
             BufferedStream bs = new BufferedStream(stream);
             byte[] hash = md5.ComputeHash(bs);
             String holder = BitConverter.ToString(hash).Replace("-", String.Empty);
             md5.Clear();
-            return holder;
+            return holder;*/
 
         }
     }
